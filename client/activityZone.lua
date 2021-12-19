@@ -22,7 +22,53 @@ CreateThread(function()
     while true do
         for k,v in pairs (wActivity.zone) do
             -- DO NOT TOUCH THIS
-            checkScripts()
+            if wActivity.zone[k].posHaverst == nil then
+                ESX.ShowNotification("~r~"..k.." n'a pas de position de récolte")
+                ESX.ShowNotification("~r~Démarrage Impossible")
+                print("^0[^3INFORMATION^0] ^1Une position de récolte à été oublier dans le config.lua")
+                return
+            end
+            if wActivity.zone[k].itemRewardHarvest == nil then
+                ESX.ShowNotification("~r~"..k.." n'a pas d'item de récompense")
+                ESX.ShowNotification("~r~Démarrage Impossible")
+                print("^0[^3INFORMATION^0] ^1Un item de récompense à été oublier dans le config.lua")
+                return
+            end
+
+            if wActivity.zone[k].itemRewardProcessing == nil then
+                ESX.ShowNotification("~r~"..k.." n'a pas d'item de récompense pour le traitement")
+                ESX.ShowNotification("~r~Démarrage Impossible")
+                print("^0[^3INFORMATION^0] ^1Un item de récompense après traitement à été oublier dans le config.lua")
+                return
+            end
+
+            if wActivity.zone[k].itemRewardPrice == nil then
+                ESX.ShowNotification("~r~"..k.." n'a pas de prix de récompense")
+                ESX.ShowNotification("~r~Démarrage Impossible")
+                print("^0[^3INFORMATION^0] ^1Un prix de récompense après traitement à été oublier dans le config.lua")
+                return
+            end
+
+            if wActivity.zone[k].posProcessing == nil then
+                ESX.ShowNotification("~r~"..k.." n'a pas de position de traitement")
+                ESX.ShowNotification("~r~Démarrage Impossible")
+                print("^0[^3INFORMATION^0] ^1Une position de traitement à été oublier dans le config.lua")
+                return
+            end
+
+            if wActivity.zone[k].posDeal == nil then
+                ESX.ShowNotification("~r~"..k.." n'a pas de position de vente")
+                ESX.ShowNotification("~r~Démarrage Impossible")
+                print("^0[^3INFORMATION^0] ^1Une position de vente à été oublier dans le config.lua")
+                return
+            end
+
+            if wActivity.zone[k].nameBlips == nil then
+                ESX.ShowNotification("~r~"..k.." n'a pas de nom de blips")
+                ESX.ShowNotification("~r~Démarrage Impossible")
+                print("^0[^3INFORMATION^0] ^1Un nom de blips à été oublier dans le config.lua")
+                return
+            end
             -- HARVEST
             local distanceHarvest = #(GetEntityCoords(PlayerPedId()) - wActivity.zone[k].posHaverst)
             if distanceHarvest < 10 then

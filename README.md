@@ -4,6 +4,7 @@ wActivity est un système de création de run (récolte / traitement / vente) qu
 
 [![N|Discord](https://img.shields.io/discord/731533946059489400?color=green&label=Discord&style=flat-square)](https://discord.gg/fivedev)
 [![N|Preview](https://img.shields.io/discord/731533946059489400?color=green&label=Preview&style=flat-square)](https://streamable.com/zrdyr0)
+[![N|Discord](https://img.shields.io/github/repo-size/Wz-FiveM/wActivity?style=flat-square)](https://discord.gg/fivedev)
 # Copyright Wz-FiveM
 # Do Not Rename this resource
 # V1.0

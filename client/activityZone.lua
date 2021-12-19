@@ -21,6 +21,7 @@ end)
 CreateThread(function()
     while true do
         for k,v in pairs (wActivity.zone) do
+        
             -- DO NOT TOUCH THIS
             if wActivity.zone[k].posHaverst == nil then
                 ESX.ShowNotification("~r~"..k.." n'a pas de position de récolte")
@@ -69,6 +70,8 @@ CreateThread(function()
                 print("^0[^3INFORMATION^0] ^1Un nom de blips à été oublier dans le config.lua")
                 return
             end
+        
+        
             -- HARVEST
             local distanceHarvest = #(GetEntityCoords(PlayerPedId()) - wActivity.zone[k].posHaverst)
             if distanceHarvest < 10 then
